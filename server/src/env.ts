@@ -1,14 +1,15 @@
-import z from 'zod'
+import z, { preprocess } from 'zod'
 
 const envSchema = z.object({
   DATABASE_URL: z.string().url(),
 })
 
-// Oque eu deveria fazer:
-// export const env = envSchema.parse(process.env)
+export const env = parseEnv()
 
-// Tive um problema com .env no arch '-'
-// Oque o arch me forçou a fazer:
-export const env = envSchema.parse({
-  DATABASE_URL: 'postgresql://docker:docker@localhost:5432/inorbit',
-})
+function parseEnv() {
+  try {
+    return envSchema.parse(process.env)
+  } catch(e) {
+    throw new Error("Add a DATABASE_URL to your .env")
+  }
+}

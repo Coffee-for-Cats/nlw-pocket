@@ -4,3 +4,4 @@ server/node_modules
 client/node_modules
 .vscode
 .migrations
+/server/scripts

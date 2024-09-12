@@ -4,8 +4,8 @@
   "description": "NLW Pocket",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx --watch src/http/server.ts",
-    "seed": "tsx src/db/seed.ts"
+    "dev": "tsx --env-file=.env --watch src/http/server.ts",
+    "seed": "tsx --env-file=.env src/db/seed.ts"
   },
   "author": "Lucas Schwalm Silva",
   "license": "ISC",
