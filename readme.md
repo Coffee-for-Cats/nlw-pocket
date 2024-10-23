@@ -1,18 +1,19 @@
 # in.Orbit
-in.Orbit é uma aplicação de gerenciamento de metas, escrito em TypeScript.
-O projeto, código e tudo mais foi desenvolvido pela RockeatSeat, durante a NLW-pocket.
+in.Orbit is a goal management app, written in Typescript.
+All the code, architecture and desing was made by RockeatSeat, during NLW-pocket.
 
-## Tecnologias
+## Technologies
 - Typescript
 - Drizzle-ORM
 - React
 - TailwindCSS
+- Docker-Compose
 
-## Run it
--> Suba uma instância Postgres usando o Docker.
+## See for yourself
+-> Run a docker container with Postgres.
 ```bash
 cd ./server
 docker compose up -d
 ```
--> Adicione a URL do Postgres em um arquivo .env dentro de /server.
--> `npm run dev` em ambos /server e /web.
+-> Make a Database Connection string and attach it to a .env file within /server.
+-> `npm run dev` in both /server and /web.
